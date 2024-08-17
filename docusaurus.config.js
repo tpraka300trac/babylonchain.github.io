@@ -1,10 +1,8 @@
-
 // @ts-nocheck
-// Note: type annotations allow type checking and IDEs autocompletion
+// Note: Type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -22,9 +20,8 @@ const config = {
   projectName: 'babylonchain.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+
+  // Internationalization settings
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -38,17 +35,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           includeCurrentVersion: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // URL for editing documentation pages
+          editUrl: 'https://github.com/babylonchain/babylonchain.github.io/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // URL for editing blog pages
+          editUrl: 'https://github.com/babylonchain/babylonchain.github.io/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -68,9 +61,8 @@ const config = {
         ],
         // Theme Options for modifying how redoc renders them
         theme: {
-          // Change with your site colors
+          // Primary color for your site
           primaryColor: '#000000',
-          
         },
       },
     ],
@@ -105,7 +97,12 @@ const config = {
             position: 'left',
             label: 'API',
           },
-          //{to: '/blog', label: 'Blog', position: 'left'},
+          // Uncomment if you add a blog section
+          // {
+          //   to: '/blog',
+          //   label: 'Blog',
+          //   position: 'left',
+          // },
           {
             href: 'https://github.com/babylonchain',
             label: 'GitHub',
@@ -147,7 +144,7 @@ const config = {
                 href: 'https://www.twitter.com/babylon_chain',
               },
               {
-                label: 'Youtube',
+                label: 'YouTube',
                 href: 'https://www.youtube.com/channel/UCmnied_wAVVa2ECVLQH2OLQ',
               }
             ],
@@ -157,12 +154,11 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: 'https://babylonchain.io/blog',
+                href: 'https://babylonchain.io/blog',
               },
             ],
           },
         ],
-        
       },
       prism: {
         theme: lightCodeTheme,
